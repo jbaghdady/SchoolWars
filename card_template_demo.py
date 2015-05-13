@@ -1,46 +1,48 @@
 import math
 import tkinter
-import cPickle
+import pickle
+
 class CardTemplate:
-	name = "Card_Name"
-	power = 0
-	tech = 0
-	will = 0
-	speed = 0
-	level = 1
-	experience = 0
-	rarity = 1
-	# Below should be auto-generated or given a default before being grown
-	roll = 0 #dribble
-	loss = 0 #steal
-	react_spd = 0 #action speed
-	observation = 0 #reflexes
-	max_HP = 0 #duh
-	support = 0 #pass
-	defense = 0 #duh
-	recovery = 0 #duh
-	critical = 0 #duh
-	crit_dam = 1.5 #duh
-	loss_resist = 0 #counter_resist
-	crit_resist = 0 #crit_resist
+	def __init__(self):
+		self.name = "Card_Name"
+		self.power = 0
+		self.tech = 0
+		self.will = 0
+		self.speed = 0
+		self.level = 1
+		self.experience = 0
+		self.rarity = 1
+		# Below should be auto-generated or given a default before being grown
+		self.roll = 0 #dribble
+		self.loss = 0 #steal
+		self.react_spd = 0 #action speed
+		self.observation = 0 #reflexes
+		self.max_HP = 0 #duh
+		self.support = 0 #pass
+		self.defense = 0 #duh
+		self.recovery = 0 #duh
+		self.critical = 0 #duh
+		self.crit_dam = 1.5 #duh
+		self.loss_resist = 0 #counter_resist
+		self.crit_resist = 0 #crit_resist
 
-	HP = 0 # HP actual
-	action = 0 #action bar actual (max 100)
+		self.HP = 0 # HP actual
+		self.action = 0 #action bar actual (max 100)
 
-	#Skills go here
-	points = 0
-	active = 1 #skills out of five
-	active_text = ""
-	active_desc = ""
-	passive1 = 0
-	passive1_text = ""
-	passive1_desc = ""
-	passive2 = 0
-	passive2_text = ""
-	passive2_desc = ""
-	passive3_text = ""
-	passive3 = 0
-	passive3_desc = ""
+		#Skills go here
+		self.points = 0
+		self.active = 1 #skills out of five
+		self.active_text = ""
+		self.active_desc = ""
+		self.passive1 = 0
+		self.passive1_text = ""
+		self.passive1_desc = ""
+		self.passive2 = 0
+		self.passive2_text = ""
+		self.passive2_desc = ""
+		self.passive3_text = ""
+		self.passive3 = 0
+		self.passive3_desc = ""
 
 def init_card(x):
 	x.name = "test"
@@ -77,7 +79,7 @@ def init_card(x):
 	x.passive1_desc = "Increase Defense, Recovery, and max HP by 3% (x" + str(x.passive1) +")"
 	x.passive2 = 0
 	x.passive2_text = "Oversight"
-	x.passive2_desc = "Incease team will and power by 1 and decrease HP by 1 (x" + str(x.passive2) + ")"
+	x.passive2_desc = "Increase team will and power by 1 and decrease HP by 1 (x" + str(x.passive2) + ")"
 	x.passive3_text = "Preparations"
 	x.passive3 = 0
 	x.passive3_desc = "Reduce damage taken when attacked by 15% (x" + str(x.passive3) + ")"
@@ -150,7 +152,7 @@ def set_skills(x):
 			print("For future reference, you have ",x.points," points available")
 
 
-test = CardTemplate
+test = CardTemplate()
 init_card(test)
 print_card(test)
 
