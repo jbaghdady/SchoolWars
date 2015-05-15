@@ -44,6 +44,48 @@ class CardTemplate:
 		self.passive3 = 0
 		self.passive3_desc = ""
 
+	def print_basic_stats(self):
+		print("Card", "Name", "=", self.name, sep=" ")
+		print("Power", "=", self.power, sep=" ")
+		print("Tech", "=", self.tech, sep=" ")
+		print("Will", "=", self.will, sep=" ")
+		print("Speed", "=", self.speed, sep=" ")
+		print("Level = ", self.level)
+		print("Experience = ", self.experience)
+		rar_string = ""
+		for i in range(self.rarity):
+			rar_string = rar_string + "*"
+		print("Rarity = ", rar_string)
+
+	def print_adv_stats(self):
+		print("Roll = ",self.roll)
+		print("Loss = ",self.loss)
+		print("Reaction Speed = ", self.react_spd)
+		print("Observation = ", self.observation)
+		print("HP = ", self.max_HP)
+		print("Support = ", self.support)
+		print("Defense = ", self.defense)
+		print("Recovery = ", self.recovery)
+		print("Critical = ", self.critical)
+		print("Critical Damage = ", self.crit_dam)
+		print("Loss Resistance = ", self.loss_resist)
+		print("Critical Resistance = ", self.crit_resist)
+
+	def print_skills(self):
+		print("Available Skill Points: ", self.points)
+		print(self.active_text)
+		print(self.active_desc)
+		print(self.active,"/5")
+		print(self.passive1_text)
+		print(self.passive1_desc)
+		print(self.passive1,"/5")
+		print(self.passive2_text)
+		print(self.passive2_desc)
+		print(self.passive2,"/5")
+		print(self.passive3_text)
+		print(self.passive3_desc)
+		print(self.passive3,"/5")
+
 def init_card(x):
 	x.name = "test"
 	x.power = 12
@@ -84,55 +126,13 @@ def init_card(x):
 	x.passive3 = 0
 	x.passive3_desc = "Reduce damage taken when attacked by 15% (x" + str(x.passive3) + ")"
 
-def print_basic_stats(x):
-	print("Card", "Name", "=", x.name, sep=" ")
-	print("Power", "=", x.power, sep=" ")
-	print("Tech", "=", x.tech, sep=" ")
-	print("Will", "=", x.will, sep=" ")
-	print("Speed", "=", x.speed, sep=" ")
-	print("Level = ", x.level)
-	print("Experience = ", x.experience)
-	rar_string = ""
-	for i in range(x.rarity):
-		rar_string = rar_string + "*"
-	print("Rarity = ", rar_string)
-
-def print_adv_stats(x):
-	print("Roll = ",x.roll)
-	print("Loss = ",x.loss)
-	print("Reaction Speed = ", x.react_spd)
-	print("Observation = ", x.observation)
-	print("HP = ", x.max_HP)
-	print("Support = ", x.support)
-	print("Defense = ", x.defense)
-	print("Recovery = ", x.recovery)
-	print("Critical = ", x.critical)
-	print("Critical Damage = ", x.crit_dam)
-	print("Loss Resistance = ", x.loss_resist)
-	print("Critical Resistance = ", x.crit_resist)
-
-def print_skills(x):
-	print("Available Skill Points: ", x.points)
-	print(x.active_text)
-	print(x.active_desc)
-	print(x.active,"/5")
-	print(x.passive1_text)
-	print(x.passive1_desc)
-	print(x.passive1,"/5")
-	print(x.passive2_text)
-	print(x.passive2_desc)
-	print(x.passive2,"/5")
-	print(x.passive3_text)
-	print(x.passive3_desc)
-	print(x.passive3,"/5")
-
 def print_card(x):
 	print()
-	print_basic_stats(x)
+	x.print_basic_stats()
 	print()
-	print_adv_stats(x)
+	x.print_adv_stats()
 	print()
-	print_skills(x) 
+	x.print_skills() 
 	print()
 
 def level_set(x):
@@ -143,7 +143,7 @@ def level_set(x):
 		exit()
 
 def set_skills(x):
-	print_adv_stats(x)
+	x.print_adv_stats()
 	if (x.points > 0):
 		resp = input("Would you like to allocate skill points? (Y/N)")
 		if resp == "Y" or resp == "y" or resp == "yes" or resp == "Yes":
