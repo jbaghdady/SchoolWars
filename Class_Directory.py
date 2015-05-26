@@ -21,7 +21,7 @@ class CardTemplate:
 		self.crit_dam = 1.5 #duh
 		self.loss_resist = 0 #counter_resist
 		self.crit_resist = 0 #crit_resist
-
+ 
 		self.HP = 0 # HP actual
 		self.action = 0 #action bar actual (max 100)
 
