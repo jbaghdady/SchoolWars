@@ -126,7 +126,7 @@ def init_card(x):
 	x.passive1_3 = 0
 	x.passive1_3_desc = "Reduce damage taken when attacked by 15% (x" + str(x.passive1_3) + ")"
 	
-	x.active2 = 2 # Baghs code
+	x.active2 = 1 # Baghs code
 	x.active2_text = "Here we go again!"
 	x.active2_desc = "Boost Stamina by 10% (x" + str(x.active2) + ")"
 	x.passive2_1 = 0
@@ -139,7 +139,7 @@ def init_card(x):
 	x.passive2_3_text = "Hands"
 	x.passive2_3_desc = "Boost team will by 4% and decrease max HP by 5% (x" + str(x.passive2_3) + ")"
 	
-	x.active3 = 3
+	x.active3 = 1
 	x.active3_text = "Mine Mine Mine!!!"
 	x.active3_desc = "Boost Reflexes and Steal by 25% (x" + str(x.active3) + ")"
 	x.passive3_1 = 0
@@ -152,7 +152,7 @@ def init_card(x):
 	x.passive3_3_text = "CALEBBBBBB!!!!!!! MAKE IT STOPPPPP!!!"
 	x.passive3_3_desc = "Boost team will by 2% and increase attack damage 20% (x" + str(x.passive3_3) + ")"
 	
-	x.active4 = 4
+	x.active4 = 1
 	x.active4_text = "Are we having fun yet?"
 	x.active4_desc = "Boost Recovery, Power and max HP by 10% (x" + str(x.active4) + ")"
 	x.passive4_1 = 0
@@ -165,7 +165,7 @@ def init_card(x):
 	x.passive4_3_text = "And suddenly: Kapadia"
 	x.passive4_3_desc = "Decrease Recovery, Power, Stamina, max HP, Reflexes, Defense, Steal by 30% (x" + str(x.passive4_3) + ")"
 
-	x.active5 = 5
+	x.active5 = 1
 	x.active5_text = "A Wild Pikachu Appears!"
 	x.active5_desc = "Boost Stamina, max HP and Reflexes by 20% (x" + str(x.active5) + ")"
 	x.passive5_1 = 0
